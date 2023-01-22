@@ -16,6 +16,10 @@ const credentials = {
   redirectUri: process.env.REDIRECT_URI,
 };
 
+app.get('/', (req,res) => {
+    res.send("Welcome to Spotify Clone Server by Dipesh Jaiswal")
+});
+
 app.post('/refresh', (req, res) => {
     const refreshToken = req.body.refreshToken;
     // console.log("Hii");
